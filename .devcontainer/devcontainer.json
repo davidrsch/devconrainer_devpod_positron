@@ -1,0 +1,7 @@
+{
+    "name": "devcontainer_devpod_positron",
+    "build": {
+      "dockerfile": "Dockerfile",
+      "context": "."
+    }
+}
