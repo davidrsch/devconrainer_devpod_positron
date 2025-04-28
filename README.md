@@ -28,28 +28,34 @@ Launching a development container in Positron IDE via DevPod involves four core 
 
     1. Go to the Workspaces view and click Create.
 
+    ![create](images/create.png)
+
     2. Enter a Git repository URL or select a local folder containing your project.
+
+    ![workspace](images/workspace.png)
 
     3. DevPod will detect (or you can provide) a .devcontainer/devcontainer.json file; if none exists, DevPod auto-generates a sane default
 
-4. **Add/Select a Provider**
+4. **Add/Select a Provider and a default IDE**
 
-    1. In the DevPod Desktop app, navigate to Providers → Add, and choose docker from the default list (or run devpod provider add docker in the CLI)
+    1. In the Providers section in Workspaces → Add, and choose docker from the default list. This tells DevPod to spin up containers on your local Docker daemon. Choose Positron IDE from the dropdown so DevPod will open this IDE when the workspace is ready.
 
-    2. This tells DevPod to spin up containers on your local Docker daemon.
-
-5. **Select default IDE**
-
-    1. Choose Positron IDE from the dropdown so DevPod will open this IDE when the workspace is ready.
+    ![provider_ide](images/provider_ide.png)
 
 6. **Launch the Dev Container**
 
     1. Click Create Workspace. Under the hood, DevPod runs devpod up <your-workspace> to build (or pull) and start the container.
 
+    ![lunch](images/lunch.png)
+
     2. Once the container is up, DevPod automatically connects and opens your project in Positron via SSH.
+
+    ![positron](images/positron.png)
 
 7. **Verify and Develop**
 
     1. In Positron, confirm the remote interpreter or runtime provided by the container is active.
+
+    ![devcontainer](images/devcontainer.png)
 
     2. Make code changes, install dependencies in your devcontainer.json, and rebuild the container with Rebuild or devpod up (recreate as needed).
